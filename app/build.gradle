@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.phoenixredwolf.myday'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.phoenixredwolf.myday"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.4.3'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+
+    implementation libs.androidx.ktx
+    implementation libs.androidx.lifecycle
+    implementation libs.androidx.compose
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+    implementation libs.compose.material3
+    implementation libs.material.icons
+
+    // Testing
+    testImplementation libs.junit
+    testImplementation libs.koin.test
+    testImplementation libs.koin.junit
+    testImplementation libs.koin.test.android
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
+
+    // Koin
+    implementation libs.koin.android
+    implementation libs.koin.compose
+    implementation libs.koin.navigation
+
+    // Navigation
+    implementation libs.navigation.compose
+}

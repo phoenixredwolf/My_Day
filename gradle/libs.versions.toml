@@ -1,0 +1,29 @@
+[versions]
+ktx = "1.9.0"
+lifecycle = "2.6.1"
+composeActivity = "1.7.0"
+koinAndroid = "3.4.0"
+koinCompose = "3.4.3"
+junit = "4.13.2"
+junitAndroid = "1.1.5"
+espresso = "3.5.1"
+material3 = "1.1.0-beta01"
+materialIcons = "1.5.0-alpha01"
+navigation = "2.5.3"
+
+[libraries]
+androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
+androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+androidx-compose = { group = "androidx.activity", name = "activity-compose", version = "composeActivity" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version = "koinAndroid" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version = "koinCompose" }
+koin-navigation = { group = "io.insert-koin", name = "koin-androidx-compose-navigation", version = "koinCompose" }
+koin-test = { group = "io.insert-koin", name = "koin-test", version = "koinAndroid" }
+koin-junit = { group = "io.insert-koin", name = "koin-test-junit4", version = "koinAndroid" }
+koin-test-android = { group = "io.insert-koin", name = "koin-android-test", version = "koinAndroid" }
+junit = { group = "junit", name = "junit", version = "junit"}
+androidx-junit = { group = "androidx.test.ext", name = "junit", version = "junitAndroid" }
+androidx-espresso = { group = "androidx.test.espresso", name = "espresso-core", version = "espresso" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3", version = "material3" }
+material-icons = { group = "androidx.compose.material", name = "material-icons-extended", version = "materialIcons"}
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version = "navigation"}
