@@ -8,4 +8,3 @@ Technologies used:
 * Material 3
 * Retrofit
 * Moshi
-* RoomDB
